@@ -12,15 +12,21 @@
 }
 
 body {
+    background-image:  linear-gradient( 125deg, rgb(12, 11, 14), rgb(26, 24, 36));
     height: 100vh;
     overflow-x: hidden;
+}
+
+
+.all-grid {
+    height: 100vh;
     display: grid;
     grid-template-columns: 0.9fr 5fr;
     
 }
 
 @media screen and (min-width: 1300px) {
-    body {
+    .all-grid {
         grid-template-columns: 1.08fr 5fr;
     }
 }
