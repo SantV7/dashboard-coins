@@ -9,15 +9,16 @@ import { MdEuro } from "react-icons/md";
 import { TiWeatherWindyCloudy } from "react-icons/ti";
 import { GiBrazilFlag } from "react-icons/gi";
 import './/../sidebar/sidebar.css'
+import { useEffect } from "react";
 
 
 const SideBar = () => {
 
     const mes = 1 + new Date().getMonth()
-    console.log(mes)
-
 
     const dayToday =  new Date().getDate() + '/' +  mes.toString().padStart('2', 0) + '/' + new Date().getFullYear()
+
+    
   return (
       <>
        <nav id="sidebar">
