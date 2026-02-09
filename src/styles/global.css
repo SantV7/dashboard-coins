@@ -15,6 +15,12 @@ body {
     height: 100vh;
     overflow-x: hidden;
     display: grid;
-    grid-template-columns: 200px 100%;
+    grid-template-columns: 0.9fr 5fr;
     
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        grid-template-columns: 1.08fr 5fr;
+    }
 }
