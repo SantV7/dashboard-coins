@@ -30,8 +30,8 @@ const SideBar = () => {
 
         <section id="sidebar-sect-icons">
             <header>
-                <p>Dia: </p>
-                <div> {dayToday}</div>
+                <p>Dia:</p>
+                <div>{dayToday}</div>
             </header>
 
             <div className="display-icons">
