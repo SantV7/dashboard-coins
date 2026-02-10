@@ -1,0 +1,44 @@
+
+.local-explication-money {
+    text-align: center;
+    width: 50%;
+    margin-top: 27px;
+    display: flex;
+    
+    flex-flow: row nowrap;
+    gap: 13px;
+    padding-left: 18px;
+}
+
+.money-explication {
+    display: flex;
+    font-size: 17px;
+    flex-flow: column nowrap;
+    gap: 8.7px;
+}
+
+.arrow-explications {
+   
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 9px;
+    margin-left: -3px;
+}
+.symbols-money {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5.74px;
+}
+.type-money {
+    display: flex;
+    align-items: center; 
+    gap: 7px;
+}
+
+.area-convertion {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(77, 59, 77);
+    width: 100%;
+    height: 64%;  
+}
