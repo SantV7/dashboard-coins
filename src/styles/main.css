@@ -17,28 +17,60 @@
 }
 
 #convertion-coins {
-    grid-area: 1/ 1 / 4/ 2;
+    grid-area: 1 / 1 / 4/ 2;
     padding: 10px;
 }
 
 #weather {
-    grid-area: 1/ 2 / 3/ 4;
+    grid-area: 1 / 2 / 3 / 4;
 }
 
 #timer-country {
-    grid-area: 3 / 2 / 5 /4;
+    grid-area: 3 / 2 / 5 / 4;
 }
 
 #history {
-    grid-area: 1 / 4 / 5/ -2;
+    grid-area: 1 / 4 / 5 / -2;
 }
 
 #img-slide {
-    grid-area: 4 /1 /5 /2;
+    grid-area: 4 / 1 / 5 /2;
 }
 
+.local-explication-money {
+    width: 50%;
+    margin-top: 27px;
+    display: flex;
+    
+    flex-flow: row nowrap;
+    gap: 13px;
+    padding-left: 18px;
+}
 
+.money-explication {
+    display: flex;
+    font-size: 17px;
+    flex-flow: column nowrap;
+    gap: 8.7px;
+}
 
+.arrow-explications {
+   
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 9px;
+    margin-left: -3px;
+}
+.symbols-money {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5.74px;
+}
+.type-money {
+    display: flex;
+    align-items: center; 
+    gap: 7px;
+}
 
 @media screen and (max-width: 768px) {
     #main-content {
