@@ -42,10 +42,32 @@
 }
 
 
+
+
 @media screen and (max-width: 768px) {
     #main-content {
         height: 900px;
-        grid-template-rows: repeat(8, auto);
+        grid-template-rows: repeat(53, auto);
         grid-template-columns: 2fr 1fr;
+        padding: 8px;
+    }
+    #convertion-coins {
+        grid-area: 1 / 1 / 10/ 2;
+        padding: 10px;
+    }
+
+    #weather {
+        grid-area: 10 /1 /30/ 3;
+    }
+    #history {
+    grid-area: 1 / 4 / 10 / -2;
+}
+
+    #img-slide {
+        grid-area: 5 / 2 / 8/ 3;
+    }
+
+    #timer-country {
+        grid-area: 31/ 1 / 43/ 3;
     }
 }
