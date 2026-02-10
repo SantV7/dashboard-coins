@@ -2,9 +2,7 @@ import SideBar from "./components/sidebar/SideBar"
 import '../src/styles/global.css'
 import './styles/main.css'
 import ConvertionCoins from "./components/convertionCoins/ConvertionCoins"
-
-
-
+import Weather from "./components/weather/Weather"
 
 function App() {
 
@@ -19,7 +17,7 @@ function App() {
         <ConvertionCoins />
 
         <div className="data-card" id="weather">
-          <h2 className="cards-tittle">Clima</h2>
+          <Weather />
         </div>
 
         <div className="data-card" id="timer-country">
