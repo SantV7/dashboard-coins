@@ -3,6 +3,7 @@ import '../src/styles/global.css'
 import './styles/main.css'
 import ConvertionCoins from "./components/convertionCoins/ConvertionCoins"
 import Weather from "./components/weather/Weather"
+import HourCapital from "./components/hourCapital/HourCapital"
 
 function App() {
 
@@ -20,8 +21,8 @@ function App() {
           <Weather />
         </div>
 
-        <div className="data-card" id="timer-country">
-          <h2 className="cards-tittle">hora de cada pais atual</h2>
+        <div className="data-card" id="hour-capital">
+          <HourCapital />
         </div>
 
         <div className="data-card" id="history">

@@ -17,6 +17,8 @@
 }
 
 .cards-tittle {
+    padding-top: 6px;
+    text-align: center;
     font-size: 1.85em;
 }
 
@@ -29,8 +31,8 @@
     grid-area: 1 / 2 / 3 / 4;
 }
 
-#timer-country {
-    grid-area: 3 / 2 / 5 / 4;
+#hour-capital {
+    grid-area: 3 / 2 / 4 / 4;
 }
 
 #history {
@@ -38,8 +40,9 @@
 }
 
 #img-slide {
-    grid-area: 4 / 1 / 5 /2;
+    grid-area: 4 / 1 / 5 /4;
 }
+
 
 
 
@@ -52,6 +55,7 @@
         padding-left: 19px;
         justify-content: center;
     }
+
     #convertion-coins {
         grid-area: 1 / 1 / 16/ 2;
         padding: 10px;
@@ -60,16 +64,17 @@
     #weather {
         grid-area: 16 /1 /30/ 3;
     }
+
     #history {
     grid-area: 1 / 4 / 16 / -2;
-}
+    }
 
     #img-slide {
         background-color: rgb(53, 70, 92);
         grid-area: 47 / 1 / 55/ 3;
     }
 
-    #timer-country {
+    #hour-capital {
         grid-area: 30/ 1 / 47/ 3;
     }
 }
