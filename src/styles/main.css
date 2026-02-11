@@ -53,32 +53,32 @@
 
 @media screen and (max-width: 1200px) {
     #main-content {
-        height: 1800px;
-        grid-template-rows: repeat(55, auto);
+        height: 1370px;
+        grid-template-rows: repeat(auto);
         grid-template-columns: 1.6fr 1fr;
         padding-left: 19px;
         justify-content: center;
     }
 
     #convertion-coins {
-        grid-area: 1 / 1 / 16/ 2;
+        grid-area: 1 / 1 / 10/ 2;
         padding: 10px;
     }
 
     #weather {
-        grid-area: 16 /1 /30/ 3;
+        grid-area: 10 /1 /11/ 3;
     }
 
     #history {
-    grid-area: 1 / 4 / 16 / -2;
+        grid-area: 1 / 4 / 10 / -2;
+    }
+
+    
+    #hour-capital {
+        grid-area: 11/ 1 / 12/ 3;
     }
 
     #img-slide {
-        background-color: rgb(53, 70, 92);
-        grid-area: 47 / 1 / 55/ 3;
-    }
-
-    #hour-capital {
-        grid-area: 30/ 1 / 47/ 3;
+        display: none;
     }
 }

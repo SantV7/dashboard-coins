@@ -4,8 +4,9 @@
     width: 50%;
     margin-top: 27px;
     display: flex;
+    justify-content: space-between;
     flex-flow: row nowrap;
-    gap: 13px;
+    gap: 10px;
     padding-left: 18px;
 }
 
@@ -32,6 +33,8 @@
 
 .type-money {
     display: flex;
+    flex-flow: row nowrap;
+    background-color: blue;
     align-items: center; 
     gap: 7px;
 }
@@ -41,4 +44,11 @@
     margin-top: 20px;
     width: 100%;
     height: 50%;  
+}
+
+@media screen and (max-width: 1200px) {
+    .local-explication-money {
+        width: 57%;
+        background-color: blue;
+    }
 }

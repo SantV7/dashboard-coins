@@ -16,6 +16,7 @@
             width: 100%;
             display: flex;
             gap: 20px;
+            font-size: 22px;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
@@ -31,7 +32,7 @@
                 background-color: rgb(186, 186, 245);
                 padding: 8px;
                 border-radius: 10px;
-                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.822);
+                text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.808);
             }
         }
 }
