@@ -14,7 +14,7 @@
         display: flex;
         flex-flow: column nowrap;
         text-align: center;
-        gap: 6.75px;
+        gap: 26.75px;
     }
     #capital-name > .name {
         display: flex;
@@ -31,11 +31,18 @@
 #hour-capital {
     display: flex;
     flex-flow: column nowrap;
-    gap: 6px;
+    gap: 21.1px;
 
     .time-to-capital {
-        border-radius: 2.3px;
-        padding: 3px;
+        padding: 5px 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
         border-bottom: 3px solid orange;
+        background-color: rgba(181, 181, 247, 0.226);
+
+        &:hover {
+        }
     }
 }
