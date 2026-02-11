@@ -4,9 +4,32 @@
     align-items: center;
     justify-content: space-evenly;
     flex-flow: row nowrap;    
-    gap: 10px;
+    gap: 15px;
     padding-top: 40px;
     text-align: left;
     font-size: clamp(17px, 20px, 26px);
+
+
+    #capital-name  {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 6.75px;
+    }
+    #capital-name > .name {
+        border-radius: 2px;
+        padding: 3px;
+        border-bottom: 3px solid rgb(162, 162, 255);
+    }
 }
 
+#hour-capital {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 6px;
+
+    .time-to-capital {
+        border-radius: 2.3px;
+        padding: 3px;
+        border-bottom: 3px solid orange;
+    }
+}
