@@ -13,9 +13,15 @@
     #capital-name  {
         display: flex;
         flex-flow: column nowrap;
+        text-align: center;
         gap: 6.75px;
     }
     #capital-name > .name {
+        display: flex;
+        gap: 5px;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
         border-radius: 2px;
         padding: 3px;
         border-bottom: 3px solid rgb(162, 162, 255);

@@ -7,13 +7,9 @@ const HourCapital = () => {
     const [hourTokyo, setHourTokyo] = useState((new Date().getUTCHours() + 9 + 24) % 24)
     const [hourWashington, setHourWashington] = useState((new Date().getUTCHours() - 5 + 24) % 24)
     const [hourBrussels, setHourBrussels] = useState((new Date().getUTCHours() + 1 + 24) % 24)
-
     const [timeDefaultTokyo, setTimeDefaultTokyo] = useState('')
-    
     const [timeDefaultBrasilia, setTimeDefaultBrasilia] = useState('')
-
     const [timeDefaultWashington, setTimeDefaultWashington] = useState('')
-
     const [timeDefaultBrussels, setTimeDefaultBrussels] = useState('')
 
     const [minutes, setMinutes] = useState(new Date().getMinutes())
@@ -25,15 +21,10 @@ const HourCapital = () => {
             const nowGetTime = new Date()
 
             setHourBrasilia((nowGetTime.getUTCHours() - 3 + 24) % 24 )
-
             setHourTokyo((nowGetTime.getUTCHours() + 9 + 24) % 24) 
-
             setHourWashington((nowGetTime.getUTCHours() - 5 + 24) % 24)
-
             setHourBrussels((nowGetTime.getUTCHours() + 1 + 24) % 24)
-
             setMinutes(nowGetTime.getMinutes())
-
             setSeconds(nowGetTime.getSeconds())
         }, 1000)
 
@@ -43,44 +34,44 @@ const HourCapital = () => {
         let newHourBrussels = hourBrussels
 
 
-            if(newHourTokyo >= 12 && newHourTokyo <= 17) {
+            if(newHourTokyo >= Number(12) && newHourTokyo <= Number(17)) {
                 setTimeDefaultTokyo('Tarde')
-            } else if (newHourTokyo >= 18 && newHourTokyo <= 24) {
+            } else if (newHourTokyo >= Number(18) && newHourTokyo <= Number(24)) {
                 setTimeDefaultTokyo('Noite')
-            } else if (newHourTokyo >= 1 && newHourTokyo <= 5) {
+            } else if (newHourTokyo >= Number(1) && newHourTokyo <= Number(5)) {
                 setTimeDefaultTokyo('Madrugada')
             } else {
                 setTimeDefaultTokyo('Manhã')
             }
 
 
-            if(newHourBrasilia >= 12 && newHourBrasilia <= 17) {
+            if(newHourBrasilia >= Number(12) && newHourBrasilia <= Number(17)) {
                 setTimeDefaultBrasilia('Tarde')
-            } else if (newHourBrasilia >= 18 && newHourBrasilia <= 24) {
+            } else if (newHourBrasilia >= Number(18) && newHourBrasilia <= Number(24)) {
                 setTimeDefaultBrasilia('Noite')
-            } else if (newHourBrasilia >= 1 && newHourBrasilia <= 5) {
+            } else if (newHourBrasilia >= Number(1) && newHourBrasilia <= Number(5)) {
                 setTimeDefaultBrasilia('Madrugada')
             } else {
                 setTimeDefaultBrasilia('Manhã')
             }
 
 
-            if(newHourWashington >= 12 && newHourWashington <= 17) {
+            if(newHourWashington >= Number(12) && newHourWashington <= Number(17)) {
                 setTimeDefaultWashington('Tarde')
-            } else if (newHourWashington >= 18 && newHourWashington <= 24) {
+            } else if (newHourWashington >= Number(18) && newHourWashington <= Number(24)) {
                 setTimeDefaultWashington('Noite')
-            } else if (newHourWashington >= 1 && newHourWashington <= 5) {
+            } else if (newHourWashington >= Number(1) && newHourWashington <= Number(5)) {
                 setTimeDefaultWashington('Madrugada')
             } else {
                 setTimeDefaultWashington('Manhã')
             }
 
 
-            if(newHourBrussels >= 12 && newHourBrussels <= 17) {
+            if(newHourBrussels >= Number(12) && newHourBrussels <= Number(17)) {
                 setTimeDefaultBrussels('Tarde')
-            } else if (newHourBrussels >= 18 && newHourBrussels <= 24) {
+            } else if (newHourBrussels >= Number(18) && newHourBrussels <= Number(24)) {
                 setTimeDefaultBrussels('Noite')
-            } else if (newHourBrussels >= 1 && newHourBrussels <= 5) {
+            } else if (newHourBrussels >= Number(1) && newHourBrussels <= Number(5)) {
                 setTimeDefaultBrussels('Madrugada')
             } else {
                 setTimeDefaultBrussels('Manhã')
@@ -96,10 +87,10 @@ const HourCapital = () => {
      <h3 className="cards-tittle">Hora da capital</h3>
     <div className='hour-capital-area'>
         <div id='capital-name'>
-            <div className='name'>Tokyo - {timeDefaultTokyo}</div>
-            <div className='name'>Brasília - {timeDefaultBrasilia}</div>
-            <div className='name'>Washington - {timeDefaultWashington}</div>
-            <div className='name'>Brussels - {timeDefaultBrussels}</div>
+            <div className='name'>Tokyo <div>-</div> <div>{timeDefaultTokyo}</div></div>
+            <div className='name'>Brasília <div>-</div> <div>{timeDefaultBrasilia}</div></div>
+            <div className='name'>Washington <div>-</div> <div>{timeDefaultWashington}</div></div>
+            <div className='name'>Brussels <div>-</div> <div>{timeDefaultBrussels}</div></div>
         </div>
 
         <div id='hour-capital'>
