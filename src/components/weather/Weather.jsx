@@ -12,13 +12,13 @@ const Weather = () => {
 
   return (
     <>
-    <h2 id='weather-h2' className="cards-tittle">Clima <TiWeatherCloudy size={54}/></h2>
+    <h2 id='weather-h2' className="cards-tittle">Clima <TiWeatherCloudy size={42}/></h2>
 
     <div className="weather-location">
-        <div className='climate-capital-name' id="jp-capital">Tokyo - JP  <div className="climate-temperature">2°C</div></div>
-        <div className='climate-capital-name' id="brasil-capital">Brasília - BR  <div className="climate-temperature">25°C</div></div>
-        <div className='climate-capital-name' id="washington-capital">Washington - US  <div className="climate-temperature">29°C</div></div>
-        <div className='climate-capital-name' id="brussels-capital">Brussels - BE  <div className="climate-temperature">17°C</div></div>
+        <div className='climate-capital-name' id="jp-capital">Tokyo - JP  <div className="climate-temperature"><TiWeatherCloudy size={32}/> 2°C</div></div>
+        <div className='climate-capital-name' id="brasil-capital">Brasília - BR  <div className="climate-temperature"><TiWeatherCloudy size={32}/> 25°C</div></div>
+        <div className='climate-capital-name' id="washington-capital">Washington - US  <div className="climate-temperature"><TiWeatherCloudy size={32}/> 29°C</div></div>
+        <div className='climate-capital-name' id="brussels-capital">Brussels - BE  <div className="climate-temperature"><TiWeatherCloudy size={32}/> 17°C</div></div>
     </div>
     </>
   )

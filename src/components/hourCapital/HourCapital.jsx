@@ -7,6 +7,7 @@ const HourCapital = () => {
     const [hourTokyo, setHourTokyo] = useState((new Date().getUTCHours() + 9 + 24) % 24)
     const [hourWashington, setHourWashington] = useState((new Date().getUTCHours() - 5 + 24) % 24)
     const [hourBrussels, setHourBrussels] = useState((new Date().getUTCHours() + 1 + 24) % 24)
+
     const [timeDefaultTokyo, setTimeDefaultTokyo] = useState('')
     const [timeDefaultBrasilia, setTimeDefaultBrasilia] = useState('')
     const [timeDefaultWashington, setTimeDefaultWashington] = useState('')
@@ -32,6 +33,7 @@ const HourCapital = () => {
         let newHourBrasilia = hourBrasilia
         let newHourWashington = hourWashington
         let newHourBrussels = hourBrussels
+
 
 
             if(newHourTokyo >= Number(12) && newHourTokyo <= Number(17)) {
@@ -96,25 +98,25 @@ const HourCapital = () => {
         <div id='hour-capital'>
             <div className='time-to-capital'>
                 {
-                 `${hourTokyo.toString().padStart('2', 0)}:${minutes.toString().padStart('2', 0)}:${seconds.toString().padStart('2', 0)}h
+                 `${hourTokyo.toString().padStart('2', 0)}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart('2', 0)}h
                `}                
             </div>
 
             <div className='time-to-capital'>
                 {
-                 `${hourBrasilia.toString().padStart('2', 0)}:${minutes.toString().padStart('2', 0)}:${seconds.toString().padStart('2', 0)}h
+                 `${hourBrasilia.toString().padStart('2', 0)}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart('2', 0)}h
                `}
             </div>
 
             <div className='time-to-capital'>
                 {
-                 `${hourWashington.toString().padStart('2', 0)}:${minutes.toString().padStart('2', 0)}:${seconds.toString().padStart('2', 0)}h
+                 `${hourWashington.toString().padStart('2', 0)}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart('2', 0)}h
                `}               
             </div>
 
             <div className='time-to-capital'>
                 {
-                 `${hourBrussels.toString().padStart('2', 0)}:${minutes.toString().padStart('2', 0)}:${seconds.toString().padStart('2', 0)}h
+                 `${hourBrussels.toString().padStart('2', 0)}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart('2', 0)}h
                `}               
             </div>
         </div>

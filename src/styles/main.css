@@ -51,7 +51,7 @@
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     #main-content {
         height: 1800px;
         grid-template-rows: repeat(55, auto);
