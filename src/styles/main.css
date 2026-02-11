@@ -17,6 +17,10 @@
 }
 
 .cards-tittle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     padding-top: 6px;
     text-align: center;
     font-size: 1.85em;
