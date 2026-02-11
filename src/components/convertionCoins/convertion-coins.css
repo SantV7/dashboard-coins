@@ -34,7 +34,6 @@
 .type-money {
     display: flex;
     flex-flow: row nowrap;
-    background-color: blue;
     align-items: center; 
     gap: 7px;
 }
@@ -49,6 +48,5 @@
 @media screen and (max-width: 1200px) {
     .local-explication-money {
         width: 57%;
-        background-color: blue;
     }
 }

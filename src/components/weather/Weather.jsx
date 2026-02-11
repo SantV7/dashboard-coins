@@ -1,8 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../weather/weather.css'
 import { TiWeatherCloudy } from "react-icons/ti";
+import gsap from 'gsap';
 
 const Weather = () => {
+
+  useEffect(() => {
+    gsap.fromTo('.climate-temperature', {
+      opacity: 0,
+      y: 100
+    }, {
+      duration: 2.3,
+      ease: 'power3',
+      opacity:1,
+      y: 0
+    })
+  }, [])
 
   const [weatherTokyo, setWeatherTokyo] = useState(null)
   const [weatherBrasilia, setWeatherBrasilia] = useState(null)

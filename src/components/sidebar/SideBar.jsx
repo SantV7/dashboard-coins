@@ -10,10 +10,23 @@ import { TiWeatherWindyCloudy } from "react-icons/ti";
 import { GiBrazilFlag } from "react-icons/gi";
 import './/../sidebar/sidebar.css'
 import { useEffect } from "react";
+import gsap from "gsap";
+
 
 
 const SideBar = () => {
 
+    useEffect(() => {
+        gsap.fromTo('#sidebar-sect-icons', {
+            opacity: 0.4,
+            y: 100
+        }, {
+            duration: 1.4,
+            ease: 'power3',
+            opacity:1,
+            y: 0
+        })
+    }, [])
     const mes = 1 + new Date().getMonth()
 
     const dayToday =  new Date().getDate() + '/' +  mes.toString().padStart('2', 0) + '/' + new Date().getFullYear()
