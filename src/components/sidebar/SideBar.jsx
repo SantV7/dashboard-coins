@@ -13,7 +13,6 @@ import { useEffect } from "react";
 import gsap from "gsap";
 
 
-
 const SideBar = () => {
 
     useEffect(() => {
