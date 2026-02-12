@@ -43,11 +43,6 @@
     grid-area: 1 / 4 / 5 / -2;
 }
 
-#img-slide {
-    grid-area: 4 / 1 / 5 /4;
-}
-
-
 
 
 
@@ -72,13 +67,9 @@
     #history {
         grid-area: 1 / 4 / 10 / -2;
     }
-
     
     #hour-capital {
         grid-area: 11/ 1 / 12/ 3;
     }
 
-    #img-slide {
-        display: none;
-    }
 }

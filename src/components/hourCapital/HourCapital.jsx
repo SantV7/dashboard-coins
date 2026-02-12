@@ -8,11 +8,6 @@ const HourCapital = () => {
     const [hourWashington, setHourWashington] = useState((new Date().getUTCHours() - 5 + 24) % 24)
     const [hourBrussels, setHourBrussels] = useState((new Date().getUTCHours() + 1 + 24) % 24)
 
-    const [timeDefaultTokyo, setTimeDefaultTokyo] = useState('')
-    const [timeDefaultBrasilia, setTimeDefaultBrasilia] = useState('')
-    const [timeDefaultWashington, setTimeDefaultWashington] = useState('')
-    const [timeDefaultBrussels, setTimeDefaultBrussels] = useState('')
-
     const [minutes, setMinutes] = useState(new Date().getMinutes())
     const [seconds, setSeconds] = useState(new Date().getSeconds())      
     

@@ -35,6 +35,14 @@ const SideBar = () => {
             duration: 1.3,
             ease: 'power2'
         })
+
+        gsap.fromTo('.icon-hover', {
+            y:60
+        }, {
+            y:0,
+            ease: 'sine',
+            duration: 0.6
+        })
     }, [])
 
 
