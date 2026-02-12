@@ -17,7 +17,7 @@ const SideBar = () => {
 
     useEffect(() => {
         gsap.fromTo('#sidebar-sect-icons', {
-            opacity: 0.4,
+            opacity: 0.35,
             y: 100
         }, {
             duration: 1.4,

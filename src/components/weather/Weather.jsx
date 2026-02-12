@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
 import '../weather/weather.css'
-import { TiWeatherCloudy } from "react-icons/ti";
 import gsap from 'gsap';
+
+import { TiWeatherDownpour } from "react-icons/ti"; //ICON Rain
+import { TiWeatherCloudy } from "react-icons/ti"; //ICON Rain
+import { TiWeatherPartlySunny } from "react-icons/ti"; //ICON Sun
 
 const Weather = () => {
 
@@ -16,6 +19,7 @@ const Weather = () => {
       y: 0
     })
   }, [])
+
 
   const [weatherTokyo, setWeatherTokyo] = useState(null)
   const [weatherBrasilia, setWeatherBrasilia] = useState(null)

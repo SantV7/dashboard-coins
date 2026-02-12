@@ -25,63 +25,28 @@ const HourCapital = () => {
             setHourTokyo((nowGetTime.getUTCHours() + 9 + 24) % 24) 
             setHourWashington((nowGetTime.getUTCHours() - 5 + 24) % 24)
             setHourBrussels((nowGetTime.getUTCHours() + 1 + 24) % 24)
+
             setMinutes(nowGetTime.getMinutes())
             setSeconds(nowGetTime.getSeconds())
         }, 1000)
 
-        let newHourTokyo = hourTokyo
-        let newHourBrasilia = hourBrasilia
-        let newHourWashington = hourWashington
-        let newHourBrussels = hourBrussels
 
-
-
-            if(newHourTokyo >= Number(12) && newHourTokyo <= Number(17)) {
-                setTimeDefaultTokyo('Tarde')
-            } else if (newHourTokyo >= Number(18) && newHourTokyo <= Number(24)) {
-                setTimeDefaultTokyo('Noite')
-            } else if (newHourTokyo >= Number(1) && newHourTokyo <= Number(5)) {
-                setTimeDefaultTokyo('Madrugada')
-            } else {
-                setTimeDefaultTokyo('Manhã')
-            }
-
-
-            if(newHourBrasilia >= Number(12) && newHourBrasilia <= Number(17)) {
-                setTimeDefaultBrasilia('Tarde')
-            } else if (newHourBrasilia >= Number(18) && newHourBrasilia <= Number(24)) {
-                setTimeDefaultBrasilia('Noite')
-            } else if (newHourBrasilia >= Number(1) && newHourBrasilia <= Number(5)) {
-                setTimeDefaultBrasilia('Madrugada')
-            } else {
-                setTimeDefaultBrasilia('Manhã')
-            }
-
-
-            if(newHourWashington >= Number(12) && newHourWashington <= Number(17)) {
-                setTimeDefaultWashington('Tarde')
-            } else if (newHourWashington >= Number(18) && newHourWashington <= Number(24)) {
-                setTimeDefaultWashington('Noite')
-            } else if (newHourWashington >= Number(1) && newHourWashington <= Number(5)) {
-                setTimeDefaultWashington('Madrugada')
-            } else {
-                setTimeDefaultWashington('Manhã')
-            }
-
-
-            if(newHourBrussels >= Number(12) && newHourBrussels <= Number(17)) {
-                setTimeDefaultBrussels('Tarde')
-            } else if (newHourBrussels >= Number(18) && newHourBrussels <= Number(24)) {
-                setTimeDefaultBrussels('Noite')
-            } else if (newHourBrussels >= Number(1) && newHourBrussels <= Number(5)) {
-                setTimeDefaultBrussels('Madrugada')
-            } else {
-                setTimeDefaultBrussels('Manhã')
-            }            
+        // Clean code on condition
 
         return () => clearInterval(interval)
     },[])
     
+        const getPeriod = (hour) => {
+            if(hour >= 6 && hour < 12) {
+                return 'Manhã'
+            } else if(hour >= 12 && hour < 18) {
+                return 'Tarde'
+            } else if(hour >= 18 && hour < 23) {
+                return 'Noite'
+            } else {
+                return 'Madrugada'
+            }
+        }
 
 
   return (
@@ -89,10 +54,10 @@ const HourCapital = () => {
      <h3 className="cards-tittle">Hora da capital</h3>
     <div className='hour-capital-area'>
         <div id='capital-name'>
-            <div className='name'>Tokyo <div>-</div> <div>{timeDefaultTokyo}</div></div>
-            <div className='name'>Brasília <div>-</div> <div>{timeDefaultBrasilia}</div></div>
-            <div className='name'>Washington <div>-</div> <div>{timeDefaultWashington}</div></div>
-            <div className='name'>Brussels <div>-</div> <div>{timeDefaultBrussels}</div></div>
+            <div className='name'>Tokyo <div>-</div> <div>{getPeriod(hourTokyo)}</div></div>
+            <div className='name'>Brasília <div>-</div> <div>{getPeriod(hourBrasilia)}</div></div>
+            <div className='name'>Washington <div>-</div> <div>{getPeriod(hourWashington)}</div></div>
+            <div className='name'>Brussels <div>-</div> <div>{getPeriod(hourBrussels)}</div></div>
         </div>
 
         <div id='hour-capital'>
