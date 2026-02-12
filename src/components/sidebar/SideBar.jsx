@@ -26,7 +26,19 @@ const SideBar = () => {
             opacity:1,
             y: 0
         })
+
+        gsap.fromTo('.li-animation', {
+            x:100,
+            opacity: 0
+        }, {
+            x: 0,
+            opacity: 1,
+            duration: 1.3,
+            ease: 'power2'
+        })
     }, [])
+
+
     const mes = 1 + new Date().getMonth()
 
     const dayToday =  new Date().getDate() + '/' +  mes.toString().padStart('2', 0) + '/' + new Date().getFullYear()
@@ -36,10 +48,10 @@ const SideBar = () => {
       <>
        <nav id="sidebar">
         <ul id="ul-desktop">
-          <li><a href="#">Dashboard <FaHouse className="icon-hover" size={23}/> </a></li>
-          <li><a href="#">Conversão<SiConvertio className="icon-hover" size={23} /></a></li>
-          <li><a href="#">Clima<TiWeatherWindyCloudy className="icon-hover" size={30}/></a></li>
-          <li><a href="#">Histórico<MdHistory className="icon-hover" color="rgb(183, 183, 252)" size={30} /></a></li>
+          <li className="li-animation"><a href="#">Dashboard <FaHouse className="icon-hover" size={23}/> </a></li>
+          <li className="li-animation"><a href="#">Conversão<SiConvertio className="icon-hover" size={23} /></a></li>
+          <li className="li-animation"><a href="#">Clima<TiWeatherWindyCloudy className="icon-hover" size={30}/></a></li>
+          <li className="li-animation"><a href="#">Histórico<MdHistory className="icon-hover" color="rgb(183, 183, 252)" size={30} /></a></li>
         </ul>
 
         <section id="sidebar-sect-icons">

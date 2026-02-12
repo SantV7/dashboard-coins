@@ -12,8 +12,8 @@ function App() {
   useEffect(() => {
     gsap.fromTo('.data-card' , {
       opacity: 0,
-      scale: 0.8,
-      x: -100
+      scale: 1,
+      x: -130
     }, {
       ease: 'power2',
       duration:1.4,
