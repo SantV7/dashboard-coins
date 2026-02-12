@@ -9,6 +9,10 @@ import { TiWeatherPartlySunny } from "react-icons/ti"; //ICON Sun
 const Weather = () => {
 
   useEffect(() => {
+
+    // Aprender a consumir API  e fazer o resto...
+
+
     gsap.fromTo('.climate-temperature', {
       opacity: 0,
       y: 100
@@ -20,11 +24,6 @@ const Weather = () => {
     })
   }, [])
 
-
-  const [weatherTokyo, setWeatherTokyo] = useState(null)
-  const [weatherBrasilia, setWeatherBrasilia] = useState(null)
-  const [weatherWashington, setWeatherWashington] = useState(null)
-  const [weatherBrussels, setWeatherBrussels] = useState(null)
 
 
   return (
