@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import '../weather/weather.css'
 import gsap from 'gsap';
 
@@ -9,8 +9,6 @@ import { TiWeatherPartlySunny } from "react-icons/ti"; //ICON Sun
 const Weather = () => {
 
   useEffect(() => {
-
-    // Aprender a consumir API  e fazer o resto...
 
 
     gsap.fromTo('.climate-temperature', {
@@ -31,10 +29,10 @@ const Weather = () => {
     <h2 id='weather-h2' className="cards-tittle">Clima <TiWeatherCloudy size={42}/></h2>
 
     <div className="weather-location">
-        <div className='climate-capital-name' id="jp-capital">Tokyo - JP  <div className="climate-temperature"><TiWeatherCloudy size={32}/> 2°C</div></div>
-        <div className='climate-capital-name' id="brasil-capital">Brasília - BR  <div className="climate-temperature"><TiWeatherCloudy size={32}/> 25°C</div></div>
-        <div className='climate-capital-name' id="washington-capital">Washington - US  <div className="climate-temperature"><TiWeatherCloudy size={32}/> 29°C</div></div>
-        <div className='climate-capital-name' id="brussels-capital">Brussels - BE  <div className="climate-temperature"><TiWeatherCloudy size={32}/> 17°C</div></div>
+        <div className='climate-capital-name' id="jp-capital">Tokyo - JP  <div className="climate-temperature"><TiWeatherCloudy size={32}/> °C</div></div>
+        <div className='climate-capital-name' id="brasil-capital">Brasília - BR  <div className="climate-temperature"><TiWeatherCloudy size={32}/> °C</div></div>
+        <div className='climate-capital-name' id="washington-capital">Washington - US  <div className="climate-temperature"><TiWeatherCloudy size={32}/> °C</div></div>
+        <div className='climate-capital-name' id="brussels-capital">Brussels - BE  <div className="climate-temperature"><TiWeatherCloudy size={32}/> °C</div></div>
     </div>
     </>
   )
