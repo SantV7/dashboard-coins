@@ -14,16 +14,16 @@ const ConvertionCoins = () => {
           <div className="convertion-info">
             <div className="local-explication-money">
               <div className="money-explication">
-                 <div className="type-money">EUR / Euro</div>
-                 <div className="type-money">USD / Dollar</div>
-                 <div className="type-money">BRL / Real</div>
-                 <div className="type-money">JPY / Iene</div>
+                 <div className="type-money">EUR</div>
+                 <div className="type-money">USD</div>
+                 <div className="type-money">BRL</div>
+                 <div className="type-money">JPY</div>
               </div>
               <div className="arrow-explications">
-                <IoMdArrowRoundForward size={21} />
-                <IoMdArrowRoundForward size={21} />
-                <IoMdArrowRoundForward size={21} />
-                <IoMdArrowRoundForward size={21} />
+                <IoMdArrowRoundForward size={25} />
+                <IoMdArrowRoundForward size={25} />
+                <IoMdArrowRoundForward size={25} />
+                <IoMdArrowRoundForward size={25} />
               </div>
               <div className="symbols-money">
                 <BiEuro size={25} />

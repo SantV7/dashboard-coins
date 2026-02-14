@@ -48,11 +48,14 @@
     .hour-capital-area {
         justify-content: center;
     }
-    #capital-name {
-        width: 100%;
-    }
-    #capital-name > .name {
+
+    .hour-capital-area > #capital-name > .name {
         justify-content: center;
-       flex-flow: row wrap;
+        border: none;
+        gap: 5px;
+    }
+
+    #hour-capital > .time-to-capital {
+        padding: 5px 6px;
     }
 }
