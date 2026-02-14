@@ -1,15 +1,25 @@
 import { useEffect } from 'react'
 import '../weather/weather.css'
 import gsap from 'gsap';
-
-import { TiWeatherDownpour } from "react-icons/ti"; //ICON Rain
 import { TiWeatherCloudy } from "react-icons/ti"; //ICON Rain
-import { TiWeatherPartlySunny } from "react-icons/ti"; //ICON Sun
 
 const Weather = () => {
 
   useEffect(() => {
 
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=bf9babda0b7e59340e10f1e1dfe80371&units=metric')
+    .then(response => response.json())
+    .then(data => {
+      const clima = {
+         cidade: data.name,
+         temperatura: data.main.temp,
+         umidade: data.main.humidity
+      }
+      console.log(clima)
+    })
+    .catch(error => console.error('Erro:', error))
+
+    
 
     gsap.fromTo('.climate-temperature', {
       opacity: 0,

@@ -12,14 +12,14 @@ function App() {
 
   useEffect(() => {
     gsap.fromTo('.data-card' , {
-      opacity: 0,
-      scale: 1,
-      x: -130
+      opacity: 0.3,
+      scale: 0.91,
+      x: -100
     }, {
       ease: 'power2',
-      duration:1.4,
+      duration: 0.5,
       scale: 1,
-      opacity: 1.3,
+      opacity: 1,
       x: 0
     })
   },[])

@@ -18,7 +18,6 @@
     }
     #capital-name > .name {
         display: flex;
-        gap: 5px;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
@@ -41,8 +40,19 @@
         border-bottom-right-radius: 2px;
         border-bottom: 3px solid orange;
         background-color: rgba(181, 181, 247, 0.226);
+    }
+}
 
-        &:hover {
-        }
+
+@media screen and (max-width:768px) {
+    .hour-capital-area {
+        justify-content: center;
+    }
+    #capital-name {
+        width: 100%;
+    }
+    #capital-name > .name {
+        justify-content: center;
+       flex-flow: row wrap;
     }
 }
