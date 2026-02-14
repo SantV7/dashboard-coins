@@ -24,10 +24,10 @@
             .climate-temperature {
                 display: flex;
                 flex-flow: row nowrap;
-                width: 110px;
+                width: 150px;
                 font-size: 22px;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
                 gap: 3px;
                 background-color: rgb(186, 186, 245);
                 padding: 8px;

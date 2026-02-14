@@ -16,26 +16,28 @@ const Weather = () => {
     const [tempBrasilia, setTempBrasilia] = useState('')
     const [tempBrussels, setTempBrussels] = useState('')
     const [tempWashington, setTempWashington] = useState('')
-
  
 
   useEffect(() => {
     const returnCapitalTemp = (capitalData) => {
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${capitalData}&appid=bf9babda0b7e59340e10f1e1dfe80371&units=metric`)
       .then(response => response.json())
-      .then()
+      .then(temp => {
+         temp.main.temp
+      })
       .catch(error => console.error('Error', error))
     }  
     returnCapitalTemp(capitalNames.tokyo)
 
-    // Tentativa de criar a função pra deixar o código mais limpo
+    // Tentativa de criar a função pra deixar o código mais limpo e eliminar os de baixo
+
 
 
     fetch('https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=bf9babda0b7e59340e10f1e1dfe80371&units=metric')
     .then(response => response.json())
     .then(data => {
       const climaTokyo = {
-         temperatura: data.main.temp,
+         temperatura: data.main.temp
         
       }
       setTempTokyo(climaTokyo.temperatura)
@@ -49,10 +51,8 @@ const Weather = () => {
     .then(response => response.json())
     .then(data => {
       const climaBrasilia = {
-         temperatura: data.main.temp,
-         umidade: data.main.humidity
+         temperatura: data.main.temp
       }
-
       setTempBrasilia(climaBrasilia.temperatura)
       console.log(climaBrasilia)
     })
@@ -64,10 +64,8 @@ const Weather = () => {
     .then(response => response.json())
     .then(data => {
       const climaBrussels = {
-         temperatura: data.main.temp,
-         umidade: data.main.humidity
+         temperatura: data.main.temp
       }
-
       setTempBrussels(climaBrussels.temperatura)
       console.log(climaBrussels)
     })
@@ -79,10 +77,8 @@ const Weather = () => {
     .then(response => response.json())
     .then(data => {
       const climaWashington = {
-         temperatura: data.main.temp,
-         umidade: data.main.humidity
+         temperatura: data.main.temp
       }
-
       setTempWashington(climaWashington.temperatura)
       console.log(climaWashington)
     })
@@ -108,13 +104,14 @@ const Weather = () => {
     <h2 id='weather-h2' className="cards-tittle">Clima <TiWeatherCloudy size={42}/></h2>
 
     <div className="weather-location">
-        <div className='climate-capital-name' id="jp-capital">Tokyo - JP  <div className="climate-temperature"><TiWeatherCloudy size={32}/> {tempTokyo}°C</div></div>
-        <div className='climate-capital-name' id="brasil-capital">Brasília - BR  <div className="climate-temperature"><TiWeatherCloudy size={32}/> {tempBrasilia}°C</div></div>
-        <div className='climate-capital-name' id="washington-capital">Washington - US  <div className="climate-temperature"><TiWeatherCloudy size={32}/> {tempWashington}°C</div></div>
-        <div className='climate-capital-name' id="brussels-capital">Brussels - BE  <div className="climate-temperature"><TiWeatherCloudy size={32}/> {tempBrussels}°C</div></div>
+        <div className='climate-capital-name' id="jp-capital">Tokyo - JP  <div className="climate-temperature">{tempTokyo}°C</div></div>
+        <div className='climate-capital-name' id="brasil-capital">Brasília - BR  <div className="climate-temperature">{tempBrasilia}°C</div></div>
+        <div className='climate-capital-name' id="washington-capital">Washington - US  <div className="climate-temperature">{tempWashington}°C</div></div>
+        <div className='climate-capital-name' id="brussels-capital">Brussels - BE  <div className="climate-temperature">{tempBrussels}°C</div></div>
     </div>
     </>
   )
 }
 
 export default Weather
+
