@@ -3,8 +3,9 @@ import '../weather/weather.css'
 import gsap from 'gsap';
 import { TiWeatherCloudy } from "react-icons/ti"; //ICON Rain
 
-const Weather = () => {
 
+
+const Weather = () => {
   const capitalNames = {
     tokyo: 'Tokyo',
     brasilia: 'Brasilia',
@@ -12,6 +13,7 @@ const Weather = () => {
     brussels: 'Brussels'
   }
 
+  
     const [tempTokyo, setTempTokyo] = useState('')
     const [tempBrasilia, setTempBrasilia] = useState('')
     const [tempBrussels, setTempBrussels] = useState('')
@@ -19,70 +21,24 @@ const Weather = () => {
  
 
   useEffect(() => {
-    const returnCapitalTemp = (capitalData) => {
+    const intervalIdWeeather = setInterval(() => {
+    const returnCapitalTemp = (capitalData, setTemp ) => {
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${capitalData}&appid=bf9babda0b7e59340e10f1e1dfe80371&units=metric`)
       .then(response => response.json())
       .then(temp => {
-         temp.main.temp
+         setTemp(temp.main.temp)
       })
       .catch(error => console.error('Error', error))
     }  
-    returnCapitalTemp(capitalNames.tokyo)
+
+
+     returnCapitalTemp(capitalNames.tokyo, setTempTokyo)
+     returnCapitalTemp(capitalNames.brasilia, setTempBrasilia)
+     returnCapitalTemp(capitalNames.washington, setTempWashington)
+     returnCapitalTemp(capitalNames.brussels,setTempBrussels)
+  },400)
 
     // Tentativa de criar a função pra deixar o código mais limpo e eliminar os de baixo
-
-
-
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=bf9babda0b7e59340e10f1e1dfe80371&units=metric')
-    .then(response => response.json())
-    .then(data => {
-      const climaTokyo = {
-         temperatura: data.main.temp
-        
-      }
-      setTempTokyo(climaTokyo.temperatura)
-      console.log(climaTokyo)
-    })
-    .catch(error => console.error('Erro:', error))
-
-
-
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Brasilia&appid=bf9babda0b7e59340e10f1e1dfe80371&units=metric')
-    .then(response => response.json())
-    .then(data => {
-      const climaBrasilia = {
-         temperatura: data.main.temp
-      }
-      setTempBrasilia(climaBrasilia.temperatura)
-      console.log(climaBrasilia)
-    })
-    .catch(error => console.error('Erro:', error))
-
-
-
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Brussels&appid=bf9babda0b7e59340e10f1e1dfe80371&units=metric')
-    .then(response => response.json())
-    .then(data => {
-      const climaBrussels = {
-         temperatura: data.main.temp
-      }
-      setTempBrussels(climaBrussels.temperatura)
-      console.log(climaBrussels)
-    })
-    .catch(error => console.error('Erro:', error))
-
-
-
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Washington&appid=bf9babda0b7e59340e10f1e1dfe80371&units=metric')
-    .then(response => response.json())
-    .then(data => {
-      const climaWashington = {
-         temperatura: data.main.temp
-      }
-      setTempWashington(climaWashington.temperatura)
-      console.log(climaWashington)
-    })
-    .catch(error => console.error('Erro:', error))   
 
         
 
@@ -95,8 +51,11 @@ const Weather = () => {
       opacity:1,
       y: 0
     })
+
+    return () => clearInterval(intervalIdWeeather)
   }, [])
 
+  
 
 
   return (

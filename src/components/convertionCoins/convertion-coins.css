@@ -13,21 +13,22 @@ h2 {
     width: 42%;
     display: flex;
     height: 200px;
-    justify-content: space-between;
+    justify-content: center;
     flex-flow: row nowrap;
-    gap: 4px;
+    gap: 50px;
 }
 
 .money-explication {
     display: flex;
-    font-size: 17px;
+    font-size: 18.75px;
     flex-flow: column nowrap;
-    gap: 8.7px;
+    gap: 26.7px;
 }
 
 .arrow-explications {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
     gap: 20px;
 
 }
@@ -35,7 +36,9 @@ h2 {
 .symbols-money {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
     gap: 15px;
+    font-size: 21px;
 }
 
 .type-money {
@@ -58,25 +61,18 @@ h2 {
 
 @media screen and (max-width: 768px) {
     .local-explication-money {
-        width: 39%;
+        width: 40%;
+        gap: 17px;
     }
 
     .area-convertion {
         background-color: rgba(24, 26, 47, 0.573);
-        height: 300px;
+        width: 60%;
+        height: 220px;
     }
 
     .money-explication {
-        gap: 26.7px;
+        gap: 24.4px;
     }
-
-    .arrow-explications {
-        justify-content: space-between;
-    }
-
-    .symbols-money {
-        justify-content: space-between;
-    }
-
  
 }
