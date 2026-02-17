@@ -31,7 +31,6 @@ const Weather = () => {
       .catch(error => console.error('Error', error))
     }  
 
-
      returnCapitalTemp(capitalNames.tokyo, setTempTokyo)
      returnCapitalTemp(capitalNames.brasilia, setTempBrasilia)
      returnCapitalTemp(capitalNames.washington, setTempWashington)
@@ -55,7 +54,7 @@ const Weather = () => {
     return () => clearInterval(intervalIdWeeather)
   }, [])
 
-  
+
 
 
   return (

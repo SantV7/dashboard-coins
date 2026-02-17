@@ -13,7 +13,7 @@ const HourCapital = () => {
     
 
     useEffect(() => {
-        const interval = setInterval(() => {
+        const intervalHour = setInterval(() => {
             const nowGetTime = new Date()
 
             setHourBrasilia((nowGetTime.getUTCHours() - 3 + 24) % 24 )
@@ -28,7 +28,7 @@ const HourCapital = () => {
 
         // Clean code on condition
 
-        return () => clearInterval(interval)
+        return () => clearInterval(intervalHour)
     },[])
     
         const getPeriod = (hour) => {
