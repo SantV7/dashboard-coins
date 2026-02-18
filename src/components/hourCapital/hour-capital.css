@@ -16,6 +16,7 @@
         text-align: center;
         gap: 26.75px;
     }
+
     #capital-name > .name {
         display: flex;
         flex-flow: row nowrap;
@@ -47,15 +48,18 @@
 @media screen and (max-width:768px) {
     .hour-capital-area {
         justify-content: center;
+        gap: 15%;
     }
 
     .hour-capital-area > #capital-name > .name {
         justify-content: center;
+        justify-content: space-between;
         border: none;
-        gap: 5px;
+        gap: 10px;
     }
 
     #hour-capital > .time-to-capital {
         padding: 5px 6px;
     }
+    
 }
