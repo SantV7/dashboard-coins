@@ -24,6 +24,7 @@
         align-items: center;
         border-radius: 2px;
         padding: 3px;
+        gap: 13px;
         border-bottom: 3px solid rgb(162, 162, 255);
     }
 }
@@ -48,14 +49,13 @@
 @media screen and (max-width:768px) {
     .hour-capital-area {
         justify-content: center;
-        gap: 15%;
+        gap: 12%;
     }
 
     .hour-capital-area > #capital-name > .name {
-        justify-content: center;
-        justify-content: space-between;
+        align-items: center;
         border: none;
-        gap: 10px;
+        gap: 15px;
     }
 
     #hour-capital > .time-to-capital {

@@ -47,7 +47,7 @@ const HourCapital = () => {
 
   return (
     <>
-     <h3 className="cards-tittle">Hora da capital</h3>
+    <h3 className="cards-tittle">Hora da capital</h3>
     <div className='hour-capital-area'>
         <div id='capital-name'>
             <div className='name'>Tokyo <div>-</div> <div>{getPeriod(hourTokyo)}</div></div>
