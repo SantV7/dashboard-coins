@@ -55,7 +55,7 @@
     .hour-capital-area > #capital-name > .name {
         align-items: center;
         border: none;
-        gap: 15px;
+        gap: 12.35px;
     }
 
     #hour-capital > .time-to-capital {

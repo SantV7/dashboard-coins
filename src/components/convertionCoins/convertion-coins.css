@@ -4,7 +4,7 @@ h2 {
 
 .convertion-info {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     align-items: start;
     gap: 30px;
 }
@@ -55,7 +55,6 @@ h2 {
     align-items: start;
     padding: 10px;
     width: 58%;
-    
 }
 
 
@@ -73,6 +72,10 @@ h2 {
 
     .money-explication {
         gap: 24.4px;
+    }
+
+    .convertion-info {
+        flex-flow: row nowrap;
     }
  
 }

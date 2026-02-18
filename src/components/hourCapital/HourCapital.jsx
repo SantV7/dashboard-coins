@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import '../hourCapital/hour-capital.css'
-import { PiMoonStarsBold } from "react-icons/pi"; //night icon
+import { PiMoonStarsBold } from "react-icons/pi";
 import { MdSunnySnowing } from "react-icons/md";
+
+
 const HourCapital = () => {
 
     const [hourBrasilia, setHourBrasilia] = useState((new Date().getUTCHours() - 3 + 24) % 24)
@@ -26,21 +28,20 @@ const HourCapital = () => {
             setSeconds(nowGetTime.getSeconds())
         }, 1000)
 
-
-        // Clean code on condition
+        
 
         return () => clearInterval(intervalHour)
     },[])
     
         const getPeriod = (hour) => {
             if(hour >= 6 && hour < 12) {
-                return <MdSunnySnowing color='yellow' />
+                return <MdSunnySnowing size={24.65} color='yellow' />
             } else if(hour >= 12 && hour < 18) {
-                return <MdSunnySnowing  color='yellow'/>
+                return <MdSunnySnowing size={24.65}  color='yellow'/>
             } else if(hour >= 18 && hour < 23) {
-                return <PiMoonStarsBold color='rgb(95, 143, 255)'/>
+                return <PiMoonStarsBold size={26} color='rgb(201, 217, 255)'/>
             } else {
-                return <PiMoonStarsBold color='rgb(95, 143, 255)'/>
+                return <PiMoonStarsBold size={26} color='rgb(201, 217, 255)'/>
             }
         }
 
