@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../hourCapital/hour-capital.css'
-
+import { PiMoonStarsBold } from "react-icons/pi"; //night icon
+import { MdSunnySnowing } from "react-icons/md";
 const HourCapital = () => {
 
     const [hourBrasilia, setHourBrasilia] = useState((new Date().getUTCHours() - 3 + 24) % 24)
@@ -33,13 +34,13 @@ const HourCapital = () => {
     
         const getPeriod = (hour) => {
             if(hour >= 6 && hour < 12) {
-                return 'Manhã'
+                return <MdSunnySnowing color='yellow' />
             } else if(hour >= 12 && hour < 18) {
-                return 'Tarde'
+                return <MdSunnySnowing  color='yellow'/>
             } else if(hour >= 18 && hour < 23) {
-                return 'Noite'
+                return <PiMoonStarsBold color='rgb(95, 143, 255)'/>
             } else {
-                return 'Madrugada'
+                return <PiMoonStarsBold color='rgb(95, 143, 255)'/>
             }
         }
 

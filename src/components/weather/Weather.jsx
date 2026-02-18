@@ -35,7 +35,7 @@ const Weather = () => {
      returnCapitalTemp(capitalNames.brasilia, setTempBrasilia)
      returnCapitalTemp(capitalNames.washington, setTempWashington)
      returnCapitalTemp(capitalNames.brussels,setTempBrussels)
-  },400)
+  },80)
 
     // Tentativa de criar a função pra deixar o código mais limpo e eliminar os de baixo
 
