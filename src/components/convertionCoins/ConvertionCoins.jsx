@@ -3,8 +3,20 @@ import { BiEuro } from "react-icons/bi";
 import { TbCurrencyDollar } from "react-icons/tb";
 import { PiCurrencyJpyBold } from "react-icons/pi";
 import '../convertionCoins/convertion-coins.css'
+import { useEffect } from "react";
 
 const ConvertionCoins = () => {
+
+  useEffect(() => {
+    fetch('https://api.exchangerate-api.com/v4/latest/USD'
+      .then(response => response.json())
+      .then(data => {
+
+      }
+      )
+      .catch(error => console.log('Erro', error))
+    )
+  }, [])
   
 
   return (
@@ -20,12 +32,14 @@ const ConvertionCoins = () => {
                  <div className="type-money">BRL</div>
                  <div className="type-money">JPY</div>
               </div>
+
               <div className="arrow-explications">
                 <IoMdArrowRoundForward size={25} />
                 <IoMdArrowRoundForward size={25} />
                 <IoMdArrowRoundForward size={25} />
                 <IoMdArrowRoundForward size={25} />
               </div>
+
               <div className="symbols-money">
                 <BiEuro size={25} />
                 <TbCurrencyDollar size={25}/>
@@ -36,7 +50,7 @@ const ConvertionCoins = () => {
 
             
             <div className="area-convertion">
-              Aqui vai ficar o valor da cotação convertida
+         
             </div>
           </div>
 
