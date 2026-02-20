@@ -7,18 +7,20 @@ import { useEffect } from "react";
 
 const ConvertionCoins = () => {
 
+
   useEffect(() => {
-    fetch('https://api.exchangerate-api.com/v4/latest/USD'
+    const requestApiConvert = setInterval(() => {
+      fetch()
       .then(response => response.json())
-      .then(data => {
+      .then()
+      .catch(error => console.log('erro na requisão para converter, aguarde e recarregue a página') && alert('erro na requisão para converter, aguarde e recarregue a página'))
 
-      }
-      )
-      .catch(error => console.log('Erro', error))
-    )
+      return () => clearInterval(requestApiConvert)
+    }, 60000)
   }, [])
-  
 
+
+  
   return (
     <>
         <div className="data-card" id="convertion-coins">
