@@ -3,28 +3,49 @@ import { BiEuro } from "react-icons/bi";
 import { TbCurrencyDollar } from "react-icons/tb";
 import { PiCurrencyJpyBold } from "react-icons/pi";
 import '../convertionCoins/convertion-coins.css'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { FaMoneyBillTransfer } from "react-icons/fa6";
 
 const ConvertionCoins = () => {
 
-
+  const [convertCoins, setConvertCoins] = useState(null)
+  
   useEffect(() => {
-    const requestApiConvert = setInterval(() => {
-      fetch()
+    fetch('https://api.exchangerate-api.com/v4/latest/USD')
       .then(response => response.json())
-      .then()
-      .catch(error => console.log('erro na requisão para converter, aguarde e recarregue a página') && alert('erro na requisão para converter, aguarde e recarregue a página'))
+      .then(data => {
+        setConvertCoins(data.rates)
+      })
+      .catch(error => console.log('erro na requisição para converter', error))
 
-      return () => clearInterval(requestApiConvert)
-    }, 60000)
+    const requestApiConvert = setInterval(() => {
+      fetch('https://api.exchangerate-api.com/v4/latest/USD')
+        .then(response => response.json())
+        .then(data => {
+          setConvertCoins(data.rates)
+        })
+        .catch(error => console.log('erro na requisição para converter', error))
+    }, 6400)
+
+    return () => clearInterval(requestApiConvert)
   }, [])
 
 
-  
+  if (convertCoins === null) {
+    return (
+      <div className="data-card" id="convertion-coins">
+        <h2 className="cards-tittle">Conversão <FaMoneyBillTransfer size={37} /></h2>
+        <div className="area-convertion">
+          <p>Carregando valores das moedas...</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <>
         <div className="data-card" id="convertion-coins">
-          <h2 className="cards-tittle">Conversão</h2>
+          <h2 className="cards-tittle">Conversão <FaMoneyBillTransfer size={37} /></h2>
 
           <div className="convertion-info">
             <div className="local-explication-money">
@@ -52,13 +73,14 @@ const ConvertionCoins = () => {
 
             
             <div className="area-convertion">
-         
+              <p id="main-usd">USD = {convertCoins.USD}</p>
+              <p>USD = {convertCoins.EUR} EUR</p>
+              <p>USD = {convertCoins.BRL} BRL</p>
+              <p>USD = {convertCoins.JPY} JPY</p>
             </div>
           </div>
 
         </div>
-
-   
     </>
   )
 }

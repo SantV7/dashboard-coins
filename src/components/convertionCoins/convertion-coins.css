@@ -1,5 +1,8 @@
-h2 {
+#convertion-coins > h2 {
     margin-bottom: 16px;
+    display: flex;
+    gap: 20px;
+    flex-flow: row nowrap;
 }
 
 .convertion-info {
@@ -51,10 +54,27 @@ h2 {
 
 .area-convertion {
     display: flex;
-    justify-content: center;
-    align-items: start;
+    background-color: rgba(255, 255, 255, 0.144);
+    border-radius: 10px;
+    justify-content: start;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 35px;
     padding: 10px;
+    font-size: 18px;
     width: 100%;
+    margin-top: -10px;
+    text-align: center;
+
+    p {
+        text-align: center;
+        width: 100%;
+    }
+
+    #main-usd {
+        font-weight: 600;
+        font-size: 20px;
+    }
 }
 
 
@@ -66,7 +86,7 @@ h2 {
 
     .area-convertion {
         width: 60%;
-        height: 220px;
+        height: 100%;
     }
 
     .money-explication {
@@ -75,6 +95,8 @@ h2 {
 
     .convertion-info {
         flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 30px;
     }
  
 }

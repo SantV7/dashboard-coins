@@ -1,5 +1,8 @@
 #weather-h2 {
     padding-bottom: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
 }
 
 .weather-location {

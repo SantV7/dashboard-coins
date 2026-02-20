@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import '../hourCapital/hour-capital.css'
 import { PiMoonStarsBold } from "react-icons/pi";
 import { MdSunnySnowing } from "react-icons/md";
-
+import { CiTimer } from "react-icons/ci";
 
 const HourCapital = () => {
 
@@ -48,7 +48,7 @@ const HourCapital = () => {
 
   return (
     <>
-    <h3 className="cards-tittle">Hora da capital</h3>
+    <h3 id='tittle-hour' className="cards-tittle">Hora da capital <CiTimer size={34} /></h3>
     <div className='hour-capital-area'>
         <div id='capital-name'>
             <div className='name'>Tokyo <div>-</div> <div>{getPeriod(hourTokyo)}</div></div>
