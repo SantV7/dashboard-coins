@@ -21,7 +21,7 @@ const Weather = () => {
  
 
   useEffect(() => {
-    const intervalIdWeeather = setInterval(() => {
+   
     const returnCapitalTemp = (capitalData, setTemp ) => {
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${capitalData}&appid=bf9babda0b7e59340e10f1e1dfe80371&units=metric`)
       .then(response => response.json())
@@ -35,13 +35,17 @@ const Weather = () => {
      returnCapitalTemp(capitalNames.brasilia, setTempBrasilia)
      returnCapitalTemp(capitalNames.washington, setTempWashington)
      returnCapitalTemp(capitalNames.brussels,setTempBrussels)
-  },6000)
 
 
-
-        
-
-    gsap.fromTo('.climate-temperature', {
+     const setIntervalFuntion = setInterval(() => {
+        returnCapitalTemp(capitalNames.tokyo, setTempTokyo)
+        returnCapitalTemp(capitalNames.brasilia, setTempBrasilia)
+        returnCapitalTemp(capitalNames.washington, setTempWashington)
+        returnCapitalTemp(capitalNames.brussels,setTempBrussels)
+     }, 60000)
+      
+     
+     gsap.fromTo('.climate-temperature', {
       opacity: 0,
       y: 100
     }, {
@@ -50,8 +54,8 @@ const Weather = () => {
       opacity:1,
       y: 0
     })
-
-    return () => clearInterval(intervalIdWeeather)
+    
+    return () => clearInterval(setIntervalFuntion)
   }, [])
 
 

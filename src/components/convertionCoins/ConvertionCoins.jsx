@@ -73,10 +73,18 @@ const ConvertionCoins = () => {
 
             
             <div className="area-convertion">
-              <p id="main-usd">USD = {convertCoins.USD}</p>
-              <p>USD = {convertCoins.EUR} EUR</p>
-              <p>USD = {convertCoins.BRL} BRL</p>
-              <p>USD = {convertCoins.JPY} JPY</p>
+              <p id="main-usd">USD = {(convertCoins.USD * 100).toLocaleString('pt-br', {
+                style: "currency", currency: 'USD'
+              })}</p>
+              <p>USD = {(convertCoins.EUR * 100).toLocaleString('pt-br', {
+                style: "currency", currency: 'EUR'
+              })}</p>
+              <p>USD = {(convertCoins.BRL * 100).toLocaleString('pt-br', {
+                style: "currency", currency: 'BRL'
+              })}</p>
+              <p>USD = {(convertCoins.JPY * 100).toLocaleString('pt-br', {
+                style: "currency", currency: 'JPY'
+              })}</p>
             </div>
           </div>
 
