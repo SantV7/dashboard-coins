@@ -3,8 +3,8 @@
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    gap: 90px;
+    justify-content: space-evenly;
+    gap: 20px;
     border-top-right-radius: 8px;
     padding: 4.75px;
     
@@ -13,7 +13,7 @@
         flex-flow: column nowrap;
         align-items: flex-start;
         padding-top: 30px;
-        gap: 90px;
+        gap: 40px;
 
           li {
             list-style: none;
@@ -98,5 +98,10 @@
 @media screen and (max-width: 1000px) {
   #sidebar-sect-icons {
     height: 28%;
+  }
+
+ 
+  #sidebar > #ul-desktop {
+    gap: 75px;
   }
 }
