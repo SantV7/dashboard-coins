@@ -6,7 +6,6 @@ import Weather from "./components/weather/Weather"
 import HourCapital from "./components/hourCapital/HourCapital"
 import gsap from "gsap"
 import { useEffect } from "react"
-import History from "./components/history/History"
 
 function App() {
 
@@ -43,10 +42,6 @@ function App() {
           <HourCapital />
         </div>
 
-        <div className="data-card" id="history">
-          <History />
-        </div>
-        
       </main>
     </div>
     </>
