@@ -11,8 +11,13 @@ const ConvertionCoins = () => {
   
   useEffect(() => {
     fetch('https://api.exchangerate-api.com/v4/latest/USD')
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => {
+        if(!response.ok) {
+          throw new Error('Error', response.status)
+        }
+        response.json()
+      })
+      .then((data) => {
         setConvertCoins(data.rates)
       })
       .catch(error => console.log('erro na requisição para converter', error))
