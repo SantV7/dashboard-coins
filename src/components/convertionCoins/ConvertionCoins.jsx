@@ -10,28 +10,24 @@ const ConvertionCoins = () => {
   const [convertCoins, setConvertCoins] = useState(null)
   
   useEffect(() => {
-    fetch('https://api.exchangerate-api.com/v4/latest/USD')
-      .then((response) => {
+
+    const getValues = async () => {
+      try {
+        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD')
         if(!response.ok) {
-          throw new Error('Error', response.status)
-        }
-        response.json()
-      })
-      .then((data) => {
-        setConvertCoins(data.rates)
-      })
-      .catch(error => console.log('erro na requisição para converter', error))
+          throw new Error('Error' + response.status)
+        }        
+        const responseJson = await response.json()
+        setConvertCoins(responseJson.rates)
+      }
+      catch(erro) {
+        console.log('Erro:', erro)
+      }      
+    }
+    getValues()
 
-    const requestApiConvert = setInterval(() => {
-      fetch('https://api.exchangerate-api.com/v4/latest/USD')
-        .then(response => response.json())
-        .then(data => {
-          setConvertCoins(data.rates)
-        })
-        .catch(error => console.log('erro na requisição para converter', error))
-    }, 6400)
 
-    return () => clearInterval(requestApiConvert)
+
   }, [])
 
 
