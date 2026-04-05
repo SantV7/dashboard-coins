@@ -1,7 +1,5 @@
-# React + Vite
-
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dashboard com consumo de Api e forma de revisar grids.
+utilizei API's pra poder ter atualizações climáticas de certas capitais, trocando os icons mostrando ao user como está o clima, assim como umidade.
+Utilizei API'S pra ter acesso a informações de cotações de moedas em base ao dolar (pegando seu valor atual e mostrando o history.)
 
 Link for project : https://dashboard-coins.vercel.app/
