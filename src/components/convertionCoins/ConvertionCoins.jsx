@@ -16,7 +16,8 @@ const ConvertionCoins = () => {
         const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD')
         if(!response.ok) {
           throw new Error('Error' + response.status)
-        }        
+        }    
+            
         const responseJson = await response.json()
         setConvertCoins(responseJson.rates)
       }
